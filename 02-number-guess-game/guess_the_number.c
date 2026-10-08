@@ -1,45 +1,59 @@
+// srand() → initializes randomness
+// rand() → generates the number
+// % 100 + 1 → makes it 1–100
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <time.h> // => import this library for srand function
 
-int main() {
+int main()
+{
 
     srand(time(NULL));
 
-    int target,ch,number;
+    int target, ch, number;
     target = rand() % 100 + 1;
 
-    while(1) {
+    while (1)
+    {
         printf("--------------------\n");
         printf("1. Start the game : \n");
         printf("2. quit : \n");
-        scanf("%d",&ch);
+        scanf("%d", &ch);
 
-        if(ch == 1) {
+        if (ch == 1)
+        {
 
             printf("Enter The Number(1 to 100) : ");
-            scanf("%d",&number);
+            scanf("%d", &number);
 
-            if(number >=1 && number <=100) {
-                if(target == number) {
+            if (number >= 1 && number <= 100)
+            {
+                if (target == number)
+                {
                     printf("Congratulations ! You achieve the target....🎉 \n");
                 }
-                else if(target < number) {
+                else if (target < number)
+                {
                     printf("Oops ! The number is higher than target.... \n");
                 }
-                else{
+                else
+                {
                     printf("Oops ! The number is lower than target.... \n");
                 }
             }
-            else{
+            else
+            {
                 printf("Number must between 1 to 100.... \n");
             }
         }
-        else if(ch == 2) {
+        else if (ch == 2)
+        {
             printf("Quit...\n");
             break;
         }
-        else {
+        else
+        {
             printf("invalid choice...\n");
         }
     }
@@ -50,43 +64,43 @@ int main() {
 // => Dry run :-
 
 // --------------------
-// 1. Start the game : 
-// 2. quit : 
+// 1. Start the game :
+// 2. quit :
 // 1
 // Enter The Number(1 to 100) : 70
-// Oops ! The number is higher than target.... 
+// Oops ! The number is higher than target....
 // --------------------
-// 1. Start the game : 
-// 2. quit : 
+// 1. Start the game :
+// 2. quit :
 // 1
 // Enter The Number(1 to 100) : 50
-// Oops ! The number is higher than target.... 
+// Oops ! The number is higher than target....
 // --------------------
-// 1. Start the game : 
-// 2. quit : 
+// 1. Start the game :
+// 2. quit :
 // 1
 // Enter The Number(1 to 100) : 45
-// Oops ! The number is higher than target.... 
+// Oops ! The number is higher than target....
 // --------------------
-// 1. Start the game : 
-// 2. quit : 
+// 1. Start the game :
+// 2. quit :
 // 1
 // Enter The Number(1 to 100) : 30
-// Oops ! The number is lower than target.... 
+// Oops ! The number is lower than target....
 // --------------------
-// 1. Start the game : 
-// 2. quit : 
+// 1. Start the game :
+// 2. quit :
 // 1
 // Enter The Number(1 to 100) : 35
-// Oops ! The number is lower than target.... 
+// Oops ! The number is lower than target....
 // --------------------
-// 1. Start the game : 
-// 2. quit : 
+// 1. Start the game :
+// 2. quit :
 // 1
 // Enter The Number(1 to 100) : 37
-// Congratulations ! You achieve the target....🎉 
+// Congratulations ! You achieve the target....🎉
 // --------------------
-// 1. Start the game : 
-// 2. quit : 
+// 1. Start the game :
+// 2. quit :
 // 2
 // Quit...
